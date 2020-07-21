@@ -1,0 +1,44 @@
+body{
+    background-color:#e0edec;
+}
+.row-padding {
+    padding: 50px auto;
+}
+
+.col-spacing {
+    padding: 10px;
+}
+h1{
+    font-size: 49px;
+    margin-top: 40px;
+    margin-bottom: 51px;
+    color: #454545;
+}
+.btn-light{
+    margin-left: 814px;
+    margin-right: 60px;
+}
+.big-circle {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	z-index: -1;
+	opacity: 0.5;
+	height: 80%;
+}
+.medium-circle {
+	position: absolute;
+	top: 30%;
+	right: 25%;
+	z-index: -1;
+	height: 60%;
+	opacity: 0.4;
+}
+.btn-primary{
+    background-color:#032c4f;
+    border-color: #032c4f;
+}
+.btn-primary:hover{
+   background-color: #032c4f;
+   opacity: 0.7;
+}

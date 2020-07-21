@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Profile</title>
+    {% load static %}
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'style4.css' %}" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="{% static 'img/logo.svg' %}"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/success">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Profile <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <button type="button" class="btn btn-secondary"><a href="/log_out">Logout</a></button>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="col-lg-15">
+            <div class="panel profile-cover">
+                <div class="profile-cover__img">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="" />
+                    <h3 class="h3">{{logged1.first_name}} {{logged1.last_name}}</h3>
+                </div>
+                <div class="profile-cover__action bg--img" data-overlay="0.3">
+                    <button class="btn btn-rounded btn-info">
+                        <i class="fa fa-comment"></i>
+                        <span><a href="/edit_profile/{{user.id}}">Edit Profile</a></span>
+                    </button>
+                </div>
+                <div class="profile-cover__info">
+                    <ul class="nav">
+                        <li><strong>26</strong>lorem</li>
+                        <li><strong>33</strong>lorem</li>
+                        <li><strong>136</strong>lorem</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <h2>My Tweets:</h2>
+        {% for post in user.user_messages.all %}
+        <p class="ww">{{post.message}}</p>
+        <img id="heart" src="{% static 'img/unnamed.png' %}"></a>
+        {{ post.user_likes.count }}
+        {% endfor %}
+    </div>
+
+</body>
+
+</html>

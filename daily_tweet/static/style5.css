@@ -1,0 +1,15 @@
+body{
+    background-color: #dfe2e9;
+}
+.row-padding {
+    padding: 20px;
+}
+.d-flex {
+    display: flex!important;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+.container{
+    margin-top: 142px;
+}
+

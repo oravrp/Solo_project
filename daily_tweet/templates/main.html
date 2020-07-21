@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap"
+			rel="stylesheet"
+        />
+        {% load static %}
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'style.css' %}" />
+        <title>Welcome</title>
+	</head>
+	<body>
+		<header>
+			<div class="logo-container">
+				<img src="{% static 'img/logo.svg' %}">
+				<h4 class="logo">Daily Tweet</h4>
+			</div>
+		</header>
+
+		<main>
+			<section class="presentation">
+				<div class="introduction">
+					<div class="intro-text">
+						<h1>Welcome</h1>
+						<p>
+							Lorem ipsum dolor sit amet, 
+							consectetur adipiscing elit, sed eiusmod tempor 
+						</p>
+					</div>
+					<div class="cta">
+						<button class="cta-select"><a class="first" href="/">Log In</a></button>
+						<button class="cta-add a b"><a class="sec" href="/">Sign Up</a></button>
+					</div>
+				</div>
+				<div class="cover">
+					<img src="{% static 'img/proj.png' %}">
+				</div>
+			</section>
+			<img class="big-circle" src="{% static 'img/big-eclipse.svg' %}">
+			<img class="medium-circle" src="{% static 'img/mid-eclipse.svg' %}">
+        </main>
+    </body>
+</html>
